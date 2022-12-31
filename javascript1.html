@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="mainDiv" class="mainDivClass">
+        <h1>
+            JAVASCRIPT and DOM
+        </h1>
+    
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus repudiandae debitis dolorem blanditiis earum molestiae vero non ut nobis, neque eum quos veritatis deserunt temporibus nesciunt ipsa cum, laudantium, alias ab deleniti consequuntur qui. Itaque optio tempora nemo odit neque architecto ipsum fuga maiores sapiente impedit amet animi rerum ducimus quaerat, facilis corrupti ut dicta!</p>
+
+        <p id="dateTime">DATE AND TIME IS : <span id="dateTimeValue"> DEFAULT</span></p>
+        <input id="toggleButton" type="button" value="Toggle">
+        <input id="printButton" type="button" value="Print">
+
+    </div>
+
+    <script>
+        let toggleButton = document.getElementById("toggleButton");
+        let para = document.getElementById("para");
+        let printButton = document.getElementById("printButton");
+        let textToChange = document.getElementById("dateTimeValue");
+
+        function greet(){
+            console.log("Hello World");
+        }
+
+        function display()
+        {
+            let dateTime = new Date();
+            console.log(dateTime);
+            textToChange.innerHTML = dateTime;
+        }
+        
+        setInterval(display,1000);
+        // let timeout = setTimeout(greet,5000)
+        // clearTimeout(timeout);
+
+        // let interval = setInterval(greet,1000);
+        // clearInterval(interval);
+        // para.addEventListener("mouseover", function testHandler1(){
+        //     console.log("Mouse is over the paragraph");
+        // })
+
+        // para.addEventListener("mouseout", function testHandler2(){
+        //     console.log("Mouse is out of the paragraph");
+        // })
+
+
+        // toggleButton.onclick = function toggleVisibility()
+        // {
+        //     if(para.style.display != "none")
+        //     {
+        //         para.style.display = "none";
+        //     }
+        //     else
+        //     {
+        //         para.style.display = "block";
+        //     }
+        // }
+
+
+        // printButton.onclick = function printOnConsole(){
+        //     for(let i = 0; i < 11;i++){
+        //         console.log(i);
+        //     }
+        // }
+
+        // alertButton.onclick = function giveAlert()
+        // {
+        //     alert("CLicked on button");
+        // }
+    </script>
+
+</body>
+</html>
